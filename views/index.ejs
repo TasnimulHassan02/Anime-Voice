@@ -3,19 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Anime Voice</title>
 </head>
+
 <body>
-    <% if (locals.content) { %>
-        <h1><%= content.data.content %></h1>
-    <% } else { %>
-        <h1>Welcome to Anime World</h1>
-    <% } %>
-    
-    <form action="/submit" method="POST">
-        <input type="submit" value="Generate">
-    </form>
-    
+  <div class="frame">
+    <div class="card" role="region" aria-label="Quote card">
+      <div class="card-inner">
+
+        <div class="avatar-wrap">
+          <div class="avatar">
+            <!-- Replace src with your image path. The developer-provided path is used below. -->
+            <img src="/mnt/data/Screenshot 2025-11-17 190919.png" alt="avatar image">
+          </div>
+        </div>
+
+        <div class="content">
+          <div class="quote-mark">“</div>
+
+          <div class="quote-text">What are you so hesitant about?\nIt's your dream, isn't it? It's right in front of you, and you're wavering? You gotta be reckless and take whatever you can!</div>
+
+          <div class="decor" aria-hidden="true">
+            <div class="dot"></div>
+            <div class="line"></div>
+            <div class="dot"></div>
+          </div>
+
+          <div class="meta">Tomoya Okazaki</div>
+          <div class="submeta">Clannad</div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function randomColor(){
+      return `hsl(${Math.floor(Math.random()*360)}, 75%, 65%)`;
+    }
+    document.documentElement.style.setProperty('--card-bg', randomColor());
+  </script>
 </body>
 </html>
