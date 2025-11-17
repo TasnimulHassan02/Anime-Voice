@@ -6,7 +6,7 @@
       --radius: 18px;
       --inner-radius: 12px;
       --card-padding: 60px;
-      --max-width: 1250px;
+      --max-width: 1100px;
       --gutter: 28px;
     }
 
@@ -27,10 +27,11 @@
       min-height:100vh;
       box-sizing:border-box;
       background: linear-gradient(180deg, #fff, #fff);
+      padding-bottom: 100px;
     }
 
     .card{
-      min-height: 460px;
+      min-height: 450px;
       width:100%;
       max-width:var(--max-width);
       background:var(--card-bg);
@@ -44,51 +45,25 @@
 
     .card-inner{
       display:grid;
-      grid-template-columns: 300px 1fr;
+      grid-template-columns: 1fr;
       gap: var(--gutter);
       align-items:center;
       justify-items:center;
       margin-top: 10px;
+      
     }
 
-    /* Left image block */
-    .avatar-wrap{
-      width:100%;
-      height:100%;
-      display:flex;
-      align-items:flex-start;
-    }
-
-    .avatar{
-      width:260px;
-      height:260px;
-      border-radius:18px;
-      overflow:hidden;
-      border:6px solid rgba(0,0,0,0.25);
-      box-shadow: 0 6px 0 rgba(0,0,0,0.35);
-      flex-shrink:0;
-      background:linear-gradient(180deg, rgba(255,255,255,0.06), rgba(0,0,0,0.06));
-    }
-
-    .avatar img{
-      width:100%;
-      height:100%;
-      object-fit:cover;
-      display:block;
-    }
-
-    /* Right content */
+    /* content */
     .content{
-      padding-top:12px;
+      padding-top:8px;
       display:flex;
       flex-direction:column;
       justify-content:flex-start;
     }
 
     .quote-mark{
-      font-size:80px;
+      font-size:100px;
       line-height:1;
-      margin:0 0 8px 0;
       font-weight:700;
       color:var(--accent);
       opacity:0.98;
@@ -96,11 +71,11 @@
     }
 
     .quote-text{
-      font-size:22px;
+      font-size:32px;
       line-height:1.55;
       max-width:880px;
       white-space:pre-wrap;
-      margin-bottom:22px;
+      margin-bottom:40px;
       font-weight:600;
       color: #161616;
       letter-spacing:0.2px;
@@ -110,9 +85,9 @@
     .decor{
       display:flex;
       align-items:center;
-      gap:18px;
+      gap:24px;
       margin-top:6px;
-      margin-bottom:14px;
+      margin-bottom:24px;
     }
 
     .dot{
@@ -124,7 +99,7 @@
     }
 
     .line{
-      height:6px;
+      height:5px;
       border-radius:999px;
       background: rgba(0,0,0,0.12);
       flex:1;
@@ -133,17 +108,17 @@
     }
 
     .meta{
-      margin-top:8px;
+      margin-top:18px;
       color: #111;
       font-weight:700;
-      font-size:16px;
+      font-size:22px;
     }
 
     .submeta{
-      margin-top:6px;
+      margin-top:8px;
       color:var(--muted);
       font-weight:600;
-      font-size:14px;
+      font-size:18px;
     }
 
     /* Responsive adjustments */
